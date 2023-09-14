@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      button.player {
+        color: white;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+      }
+    </style>
     <title>Моя первая страница</title>
   </head>
   <body>
@@ -10,7 +18,8 @@
       <div id="player" style="height: 600px;">
         <div class="js-video-container" style="width: 100%; height: 100%; cursor: pointer;"></div>
       </div>
-      <button style="color: white; border: none; cursor: pointer; background-color: transparent;" class="fa fa-play"></button>
+      <button class="fa fa-play player"></button>
+      <button class="fa fa-pause player"></button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
