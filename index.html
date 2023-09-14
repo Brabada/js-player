@@ -9,19 +9,21 @@
         border: none;
         cursor: pointer;
         background-color: transparent;
+        width: 30px;
+        height: 25px;
+        text-align: center;
       }
     </style>
-    <title>Моя первая страница</title>
+    <title>Плеер</title>
   </head>
   <body>
-    <div style="background-color: black; width: 800px;">
-      <div id="player" style="height: 600px;">
-        <div class="js-video-container" style="width: 100%; height: 100%; cursor: pointer;"></div>
+    <div id="player" style="background-color: black; width: 800px; height: 600px;">
+      <div class="js-video-container" style="width: 100%; height: 95%; cursor: pointer;"></div>
+      <div>
+        <button type="button" class="js-play-button player"><i class="fa fa-play"></i></button>
+        <button type="button" class="js-pause-button player" hidden><i class="fa fa-pause"></i></button>
       </div>
-      <button class="fa fa-play player"></button>
-      <button class="fa fa-pause player"></button>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
     <script src="static/js/player.js"></script>
