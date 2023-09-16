@@ -16,7 +16,10 @@
         flex-grow: 1;
         cursor: pointer;
       }
-      button.player {
+
+      .button-tray {
+      }
+      .button-tray button {
         color: white;
         border: none;
         cursor: pointer;
@@ -25,9 +28,6 @@
         height: 25px;
         text-align: center;
       }
-      .button-tray {
-
-      }
     </style>
     <title>Плеер</title>
   </head>
@@ -35,8 +35,10 @@
     <div id="player" class="player-container">
       <div class="js-video-container video-container"></div>
       <div class="button-tray">
-        <button type="button" class="js-play-button player"><i class="fa fa-play"></i></button>
-        <button type="button" class="js-pause-button player" hidden><i class="fa fa-pause"></i></button>
+        <button type="button" class="js-play-button"><i class="fa fa-play"></i></button>
+        <button type="button" class="js-pause-button" hidden><i class="fa fa-pause"></i></button>
+        <button type="button" class="js-mute-button"><i class="fa fa-volume-up"></i></button>
+        <button type="button" class="js-volume-button" hidden><i class="fa fa-volume-off"></i></button>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
