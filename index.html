@@ -16,8 +16,10 @@
         flex-grow: 1;
         cursor: pointer;
       }
-
       .button-tray {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
       }
       .button-tray button {
         color: white;
@@ -31,6 +33,10 @@
         padding: 5px 20px;
         margin: 10px 0px;
         box-sizing: border-box;
+        flex-grow: 1;
+      }
+      .max-flex-grow {
+        flex-grow: 9;
       }
     </style>
     <title>Плеер</title>
@@ -43,6 +49,8 @@
         <button type="button" class="js-pause-button" hidden><i class="fa fa-pause"></i></button>
         <button type="button" class="js-mute-button"><i class="fa fa-volume-up"></i></button>
         <button type="button" class="js-volume-button" hidden><i class="fa fa-volume-off"></i></button>
+        <div class="max-flex-grow"></div>
+        <button type="button" class="js-fullscreen-button "><i class="fa fa-expand"></i></button>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
