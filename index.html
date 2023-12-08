@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-      .player-container {
+      .vp-player {
          background-color: black;
          width: 800px;
          height: 600px;
@@ -12,30 +12,28 @@
          display: flex;
          flex-direction: column;
       }
-      .video-container {
+      .vp-player__screen {
         flex-grow: 1;
         cursor: pointer;
       }
-      .button-tray {
+      .vp-player__controls {
         display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        align-items: center;
       }
-      .button-tray button {
+      .vp-player__btn {
         color: white;
         border: none;
         cursor: pointer;
         background-color: transparent;
-        width: 30px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
         text-align: center;
-        font-size: x-large;
-        padding: 5px 20px;
+        font-size: 20px;
         margin: 10px 0px;
         box-sizing: border-box;
-        flex-grow: 1;
       }
-      .max-flex-grow {
+      .vp-player__progress-bar {
+        align-items: center;
         flex-grow: 9;
       }
     </style>
@@ -49,15 +47,15 @@
     <title>Плеер</title>
   </head>
   <body>
-    <div id="player" class="player-container">
-      <div class="js-video-container video-container"></div>
-      <div class="button-tray">
-        <button type="button" class="js-play-button"><i class="fa fa-play"></i></button>
-        <button type="button" class="js-pause-button" hidden><i class="fa fa-pause"></i></button>
-        <button type="button" class="js-mute-button"><i class="fa fa-volume-up"></i></button>
-        <button type="button" class="js-volume-button" hidden><i class="fa fa-volume-off"></i></button>
-        <div class="max-flex-grow"></div>
-        <button type="button" class="js-fullscreen-button "><i class="fa fa-expand"></i></button>
+    <div id="player" class="vp-player">
+      <div class="js-video-container vp-player__screen"></div>
+      <div class="vp-player__controls">
+        <button type="button" class="vp-player__btn js-play-button"><i class="fa fa-play"></i></button>
+        <button type="button" class="vp-player__btn js-pause-button" hidden><i class="fa fa-pause"></i></button>
+        <button type="button" class="vp-player__btn js-mute-button"><i class="fa fa-volume-up"></i></button>
+        <button type="button" class="vp-player__btn js-volume-button" hidden><i class="fa fa-volume-off"></i></button>
+        <div class="vp-player__progress-bar"></div>
+        <button type="button" class="vp-player__btn js-fullscreen-button "><i class="fa fa-expand"></i></button>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
